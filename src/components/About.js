@@ -2,6 +2,9 @@ import gsap from 'gsap'
 import '../About.css'
 import about_img from '../assets/about.jpeg'
 import about_img1 from '../assets/about1.jpeg'
+import about_img2 from '../assets/about2.jpeg'
+import about_img3 from '../assets/about3.jpeg'
+import about_img4 from '../assets/about4.jpeg'
 import ShaderCanvas from './ShaderCanvas'
 import { useRef } from 'react'
 
@@ -11,7 +14,6 @@ const About = () => {
   const plane3 = useRef(null);
   const plane4 = useRef(null);
   const plane5 = useRef(null);
-  const plane6 = useRef(null);
   let requestAnimationFrameId = null;
   let xForce = 0;
   let yForce = 0;
@@ -38,7 +40,6 @@ const About = () => {
     gsap.set(plane3.current, {x: `+=${xForce * 0.08}`, y: `-=${yForce * 0.08}`})
     gsap.set(plane4.current, {x: `+=${xForce * 0.1}`, y: `+=${yForce * 0.07}`})
     gsap.set(plane5.current, {x: `+=${xForce * 0.08}`, y: `-=${yForce * 0.08}`})
-    gsap.set(plane6.current, {x: `+=${xForce * 0.1}`, y: `+=${yForce * 0.07}`})
 
     if(Math.abs(xForce) < 0.01) xForce = 0;
     if(Math.abs(yForce) < 0.01) yForce = 0;
@@ -104,7 +105,7 @@ a zakouším naši Jednotu.”</p>
       </div>
       {/* FOURTH */}
       <div className='first-paint'>
-        <div className='image'><img src={about_img1} ref={plane3} /></div>
+        <div className='image'><img src={about_img2} ref={plane3} /></div>
         <div>
           <h4>Snění s rostlinou</h4>
           <p>Snění je obecně vždy <strong>posvátný, plně vědomý okamžik propojení se s rostlinou, který otevírá brány do duchovních sfér a napomáhá tak rozvoji na všech úrovních</strong>, na nichž si to dovolíme či potřebujeme – na úrovni fyzické (fyzické léčení těla), emoční (navrácení se do pozitivního klidného prožívání života samotného), mentální (volba našich myšlenek) a duchovní (spojení se Zdrojem, prožitá Jednota). Rostliny nás mohou podpořit, posílit a uzdravit na všech těchto úrovních naší bytosti. Díky tomu se skrze Snění můžeme <strong>tzv. probudit</strong> do přirozenosti života (vyjít z otěží klamu vzniklých v nízkých vibracích úrovně vědomí), <strong>vzpomenout si, kdo skutečně jsme, a rozpomenout si na plán naší duše v této inkarnaci.</strong></p>
@@ -112,7 +113,7 @@ a zakouším naši Jednotu.”</p>
       </div>
       {/* FIFTH */}
       <div className='first-paint'>
-        <div className='image'><img src={about_img1} ref={plane4} /></div>
+        <div className='image'><img src={about_img3} ref={plane4} /></div>
         <div>
           <h4>Posvátné iniciační rituály </h4>
           <p>Spojování s rostlinami se od nepaměti děje skrze <strong>posvátné přírodní rituály</strong>, často k <strong>oslavě svátků kola roku Matky Země</strong>. Vedeným rituálem v kruhu podobně cítících bytostí či o samotě propojujeme fyzický a duchovní svět. Skrze rostlinu a samotný rituál se můžeme<strong> spojovat s naším vyšším já a povznést se tak do stavu rozšířeného vědomí</strong>. Během rituálu můžeme zakusit život tak, jak ho za normálního stavu vědomí běžně neprociťujeme. To přináší příliv blahodárné energie a pomáhá si rozpomenout, <strong>kým skutečně jsme a jaké jsou naše niterné upřímné touhy</strong>. Obřad i rostlina nám zprostředkovávají sebepoznání, nové vize, přináší léčení těla, duše či vztahů či pouze přináší hluboké spočinutí od každodennosti života a naladění na jeho jemnější frekvence. Tyto aktivity mohou také budovat hlubší a dlouhodobý vztah s rostlinam, a masivně tak rozvíjet naši intuici, schopnosti a moudrost v životě.</p>
@@ -120,7 +121,7 @@ a zakouším naši Jednotu.”</p>
       </div>
       {/* Sixth */}
       <div className='first-paint'>
-        <div className='image'><img src={about_img1} ref={plane5} /></div>
+        <div className='image'><img src={about_img4} ref={plane5}z /></div>
         <div>
           <h4>Vztah ke krajině</h4>
           <p>Žití ve vztahu s rostlinami posiluje náš vztah ke krajině samotné. <strong>Rostlinná říše nám totiž periodicky, jak se posvátné kolo roku otáčí, nabízí možnost naladit se na rytmus krajiny Země</strong> a vzpomenout si, že v každém okamžiku celého roku jsme jejím odrazem (na těle i na duši).</p>
