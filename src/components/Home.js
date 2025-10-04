@@ -55,17 +55,7 @@ const Home = () => {
   return (
     <div className='home' onMouseMove={(e) => {manageMouseMove(e)}}>
         <section className='first-paint'>
-          <div className='sluzby'>
-            <p>celostní fytoterapie</p>
-            <p>Bachovy květové esence</p>
-            <p>vlastnoruční bylinné medicíny</p>
-            <p>přírodní oslavy svátků kola roku</p>
-          </div>
-          <div className='info'>
-            <h3>Snění</h3>
-            <span>S rostlinami</span>
-            <p>rozpomenutí na posvátný vztah s rostlinami</p>
-          </div>
+          <img className='cover-img' src={cover_img}/>
         </section>
         <main className='products'>
             <Link to={'/'} className='product'>
