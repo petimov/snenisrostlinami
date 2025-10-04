@@ -1,0 +1,518 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a, p, span, h1,h2,h3,h4 {
+  color: #f6f6f6;
+  text-decoration: none;
+  font-family: 'Poppins';
+}
+
+/* NAV */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 2vh 3vw;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: transparent;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+nav > ul a {
+  transition: .4s;
+  position: relative;
+  padding: 0 4px;
+}
+
+nav > ul > div > a > img {
+  transition: .4s;
+}
+
+nav > ul > div > a:hover img {
+  scale: 1.04;
+}
+
+nav > ul > div:last-of-type {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+  gap: 20px;
+}
+
+nav > ul> .nav-image-wrapper {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+
+nav > ul > div > li > a:before {
+  content: '';
+  background: aquamarine;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 20px;
+  transition: .4s;
+}
+
+nav > ul > div > li > a:hover::before {
+  width: 100%;
+}
+
+nav > ul > div > li > a:hover, nav > ul > div > li > a:active {
+  color: aquamarine;
+}
+
+
+@media screen and (min-width: 1200px){
+.navbar.scrolled {
+  background-color:#10250de1 !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+}
+
+/* HAMBURGER */
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+.hamburger {
+  color: #dadada;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.hidden-text {
+  display: none;
+}
+
+.nav-header>.hover-img {
+  display: none;
+}
+
+.mobile-logo>a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+.nav-header>.hover-img>img {
+  height: 8vh;
+}
+
+.nav-links.open {
+  display: flex;
+  animation: slideDown 0.3s forwards;
+}
+
+.nav-links.closing {
+  display: flex;
+  animation: slideUp 0.3s forwards;
+}
+
+.nav>ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-transform: uppercase;
+  margin: 2vh 4.3vw;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+}
+
+/* HOMEPAGE */
+
+canvas {
+  position: fixed;
+  inset: 0;
+}
+
+.home > .first-paint {
+  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0 4vw 4vw 4vw;
+}
+
+.home > .first-paint > .sluzby {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 20px;
+}
+
+.home > .first-paint img {
+  max-height: 90%;
+}
+
+.home > .first-paint > .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  max-width: 260px;
+}
+
+.home > .first-paint > .info > h3 {
+  font-family: 'The Nautigal';
+  font-size: 70px;
+    letter-spacing: .5rem;
+}
+
+.home > .first-paint > .info > p {
+  margin-top: 30px;
+}
+
+.home > .first-paint > .info > span {
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: .5rem;
+}
+
+.home > .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 7vw 10vw;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+}
+
+.home > .products > .product {
+  width: 24vw;
+  aspect-ratio: 3/4;
+  background-color: black;
+  border-radius: 6px;
+  position: relative;
+  transition: .3s;
+}
+.home > .products > .product > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.home > .products > .product > span {
+  background-color: #FFFFFF99;
+  color: #1e3b04;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: 10px;
+  padding: 15px 0;
+  border-radius: 6px;
+}
+
+.home > .products > .product:hover {
+  scale: 1.01;
+}
+
+.meetings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.meetings h1 {
+  font-family: 'The Nautigal';
+  font-size: 7rem;
+  font-weight: 300;
+}
+
+.meetings > p:nth-of-type(2){
+  color: #ff99cc;
+}
+
+section, footer {
+    position: relative;
+}
+
+.meetings > p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  width: 60vw;
+}
+
+.meetings > p:first-of-type {
+  font-weight: 600;
+}
+
+.meetings > p > a {
+  transition: .4s;
+  position: relative;
+}
+
+.meetings > p > a:before {
+  content: '';
+  background: aquamarine;
+  opacity: 0.3;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  transition: .4s;
+}
+
+.meetings > p > a:hover::before {
+  width: 0;
+}
+
+.meetings > p > a:hover {
+  color: #dadada;
+}
+
+.home > section.images {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 100px 20px;
+}
+
+.home > section.images img {
+  border-radius: 6px;
+}
+
+.home > section.images img:first-of-type {
+  margin-top: -60px;
+}
+
+.home > section.images img:last-of-type {
+  margin-bottom: -60px;
+}
+
+.home > .blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 80px 0;
+}
+
+.home > .blog > h2 {
+  font-family: 'The Nautigal';
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.home > .blog > p {
+  width: 38vw;
+  text-align: center;
+  font-size: 18px;
+}
+
+.home > .blog > button {
+  background-color: #f6f6f6;
+  border: none;
+  padding: 12px 42px;
+  border-radius: 14px;
+  transition: .4s;
+  font-weight: 400;
+  font-family: 'Poppins';
+  color: #1e1e1e;
+}
+
+.home > .blog > button:hover {
+  background-color: #dadada;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px){
+  .home > .products {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home > .products > .product {
+    width: auto;
+  }
+
+  /* HAMBURGER MENU */
+
+  nav > ul > div:last-of-type {
+    display: none;
+  }
+
+  .nav>.nav-links {
+    display: none !important;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px 0;
+    z-index: 9999;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: flex-start;
+    right: 0;
+    top: -14px;
+    bottom: 0;
+    background-color: #0f1a0a;
+    padding: 40px 20px;
+    font-size: 20px;
+    gap: 30px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hover-link {
+    font-size: 1.2rem;
+    text-align: center;
+
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  /* IMGES */
+  .home > section.images {
+    padding: 20px;
+    height: auto;
+  }
+  .home > section.images img {
+    width: 45%;
+    aspect-ratio: initial;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .home > .products {
+    grid-template-columns: 1fr;
+  }
+  footer > div {
+    flex-direction: column;
+  }
+  footer > div > div {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+/* FOOTER */
+
+footer {
+    padding: 80px 40px 20px 40px;
+}
+
+.footer > div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.socials > a {
+  width: 30px;
+  height: 30px;
+  fill: #f6f6f6;
+  display: block;
+  transition: .4s;
+}
+
+.socials > a:hover, .socials > p > a:hover {
+  fill: #b7b7b7;
+}
+
+footer > div > div:first-of-type img {
+  margin-bottom: 20px;
+}
+
+footer > div > div:first-of-type > p {
+    font-family: 'The Nautigal';
+    font-size: 32px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+}
