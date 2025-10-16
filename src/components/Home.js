@@ -58,30 +58,30 @@ const Home = () => {
           <img className='cover-img' src={cover_img}/>
         </section>
         <main className='products'>
-            <Link to={'/'} className='product'>
+            <Link to={'/cajove-smesi'} className='product'>
               <img src={prod1_img}/>
               <span>Čajové směsi</span>
             </Link>
-            <Link to={'/caj'} className='product'>
+            <Link to={'/cajove-smesi'} className='product'>
               <img src={prod2_img}/>
               <span>Bylinné kapky</span>
             </Link>
-            <Link to={'/'} className='product'>
+            <Link to={'/cajove-smesi'} className='product'>
               <img src={prod3_img}/>
               <span>Bylinné oleje</span>
             </Link>
-            <Link to={'/'} className='product'>
+            <Link to={'/cajove-smesi'} className='product'>
               <img src={prod4_img}/>
               <span>Pleťové balzámy</span>
             </Link>
-            <Link to={'/'} className='product'>
+            <Link to={'/cajove-smesi'} className='product'>
               <img src={prod5_img}/>
               <span>Bylinné masti</span>
             </Link>
-             <div className='product'>
-              <img src={prod6_img}/>
+             <Link to={'/cajove-smesi'} className='product'>
+              <img src={prod5_img}/>
               <span>Gely, hydroláty, kapsle</span>
-            </div>
+            </Link>
         </main>
         <section className='meetings'>
           <h1>Setkávání</h1>

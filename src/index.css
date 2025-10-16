@@ -231,16 +231,17 @@ canvas {
   letter-spacing: .5rem;
 }
 
-.home > .products {
+.products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  row-gap: 60px;
   padding: 7vw 10vw;
   background-color: #f6f6f6;
   border-radius: 6px;
 }
 
-.home > .products > .product {
+.products > .product {
   width: 24vw;
   aspect-ratio: 3/4;
   background-color: black;
@@ -248,7 +249,7 @@ canvas {
   position: relative;
   transition: .3s;
 }
-.home > .products > .product > img {
+.products > .product > img {
   width: 100%;
   height: 100%;
   display: block;
@@ -256,7 +257,7 @@ canvas {
   border-radius: 6px;
 }
 
-.home > .products > .product > span {
+.products > .product > span {
   background-color: #FFFFFF99;
   color: #1e3b04;
   position: absolute;
@@ -269,7 +270,7 @@ canvas {
   border-radius: 6px;
 }
 
-.home > .products > .product:hover {
+.products > .product:hover {
   scale: 1.01;
 }
 

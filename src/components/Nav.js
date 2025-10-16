@@ -14,6 +14,8 @@ const Nav = () => {
   // Check if current route is home
   const isHome = location.pathname === '/';
     const isAbout = location.pathname === '/o-sneni';
+    const isByliny = location.pathname === '/byliny';
+    const isApoteka = location.pathname === '/apoteka';
 
   const animateHamburgerOpen = () => {
   const tl = gsap.timeline()
@@ -95,8 +97,8 @@ const animateHamburgerClose = () => {
           <div className={`nav-links ${menuOpen ? 'open' : isAnimating ? 'closing' : ''}`}>
               <li className={isHome ? 'hidden-text' : ''}><Link to={'/'}className='hover-link hover-link-left' onClick={handleLinkClick} >domů</Link></li>
               <li className={isAbout ? 'hidden-text' : ''}><Link to={'/o-sneni'}>o snění</Link></li>
-              <li><Link to={'/home'}>byliny a Bachovy esence</Link></li>
-              <li><Link to={'/home'}>bylinná apotéka</Link></li>
+              <li className={isByliny ? 'hidden-text' : ''}><Link to={'/byliny'}>byliny a Bachovy esence</Link></li>
+              <li className={isApoteka ? 'hidden-text' : ''}><Link to={'/apoteka'}>bylinná apotéka</Link></li>
               <li><Link to={'/home'}>služby</Link></li>
               <li><Link to={'/home'}>o mně</Link></li>
               <li><Link to={'/home'}>kontakt</Link></li>
