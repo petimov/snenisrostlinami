@@ -8,14 +8,12 @@ import Byliny from "./components/Byliny";
 import Apoteka from "./components/Apoteka";
 import CajoveSmesi from "./components/CajoveSmesi";
 import CyklusZeny from "./components/CyklusZeny";
-import Template from "./components/Template";
 
 function App() {
   return (
     <div className="App">
       <Router>
       <ScrollToTop />
-      <Template />
         <Nav />
         <Routes>
           <Route path='/' element={<Home />} />
