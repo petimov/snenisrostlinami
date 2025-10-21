@@ -52,6 +52,7 @@ const CyklusZeny = () => {
   }
   return (
     <div className='cajove-smesi' onMouseMove={(e) => {manageMouseMove(e)}}>
+       <header>„Žena pluje svým životem v pravidelných rytmech jako se Měsíc proměňuje ve svých fázích od novu k úplňku. Rozpomenutí se na naši ženskou cykličnost a žití v jejím souladu nám přináší hluboké spojení s potřebami našeho těla i duše, a následování tak přirozeného zdraví a vitality.“</header>
         <div className='first-paint'>
             <div>
             <h2>Cyklus ženy</h2>
@@ -66,7 +67,6 @@ const CyklusZeny = () => {
             </div>
              <div className='image'><img src={cyklus_img} ref={plane2} /></div>
         </div>
-        <header>„Žena pluje svým životem v pravidelných rytmech jako se Měsíc proměňuje ve svých fázích od novu k úplňku. Rozpomenutí se na naši ženskou cykličnost a žití v jejím souladu nám přináší hluboké spojení s potřebami našeho těla i duše, a následování tak přirozeného zdraví a vitality.“</header>
         <section className='images'>
           <img src={img1} ref={plane1}/>
           <img src={img2} ref={plane2}/>
