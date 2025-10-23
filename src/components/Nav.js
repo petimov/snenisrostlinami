@@ -61,7 +61,7 @@ const animateHamburgerClose = () => {
   // CHECK if pathname is:
   useEffect(() => {
     if (location.pathname.includes('o-sneni') && window.innerWidth >= 1200) {
-      navRef.current.style.backgroundColor = '#10250de1';
+      navRef.current.style.backgroundColor = '#1e3b04';
     } else {
       navRef.current.style.backgroundColor = 'inherit';
     }

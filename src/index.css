@@ -49,6 +49,7 @@ nav > ul a {
   transition: .4s;
   position: relative;
   padding: 0 4px;
+  letter-spacing: 2.4px;
 }
 
 nav > ul > div > a > img {
@@ -74,7 +75,7 @@ nav > ul> .nav-image-wrapper {
 
 nav > ul > div > li > a:before {
   content: '';
-  background: aquamarine;
+  background: #b58eab;
   display: block;
   position: absolute;
   bottom: -5px;
@@ -90,7 +91,7 @@ nav > ul > div > li > a:hover::before {
 }
 
 nav > ul > div > li > a:hover, nav > ul > div > li > a:active {
-  color: aquamarine;
+  color: #b58eab;
 }
 
 

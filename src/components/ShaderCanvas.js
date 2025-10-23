@@ -39,18 +39,14 @@ const fragmentShaderSource = `
     r = (sin(r * 0.09) * 0.5) + 0.5;
     r = pow(r, depth);
 
-    // Base green hue approx 0.25 (around 90 degrees)
-    float baseHue = 0.25;
+float hue = 0.27;       // green hue
+float sat = 0.93;       // strong saturation
+float val = 0.23;       // dark brightness
 
-    // Add slight oscillation around baseHue for richer color variation
-    float hueShift = 0.1 * sin(5.0 * r + t * 2.0);
-    float hue = mod(baseHue + hueShift, 1.0);
+// optional: tiny brightness variation for texture depth
+val *= 0.9 + 0.1 * sin(iTime * 1.0 + r * 2.0);
 
-    // Vary saturation and value with r for gradient effect
-    float sat = mix(0.6, 1.0, r);   // saturation from 60% to 100%
-    float val = mix(0.1, 0.5, r);   // value from 10% to 50%
-
-    vec3 hsv = vec3(hue, sat, val);
+vec3 hsv = vec3(hue, sat, val);
 
     fragColor = vec4(hsv2rgb(hsv), 1.0);
 }
